@@ -22,6 +22,7 @@ export default function Movie() {
     const [language, setLanguage] = useState('');
     const [subtitle, setsubtitle] = useState('');
     const [size, setsize] = useState('');
+    const [year, setYear] = useState('');
     const [quality, setQuality] = useState('');
     const [youtubelink, setYoutubelink] = useState('');
     const [category, setCategory] = useState('');
@@ -62,6 +63,15 @@ export default function Movie() {
 
     // slug function , url for every space will be generate - for every time press space 
     // don't forget marinos 
+
+    const handleSlugChange = (ev) => {
+        const inputValue = ev.target.value;
+
+        // Replace spaces with hyphens
+        const newSlug =  inputValue.replace(/\s+/g, '-');
+
+        setSlug(newSlug)
+    }
 
 
 
@@ -235,11 +245,78 @@ export default function Movie() {
                         id="slug"
                         placeholder="Url of the movie"
                         value={slug}
-                        onChange={ev => setSlug(ev.target.value)}
+                        onChange={handleSlugChange}
                     
                     
                     />
                 </div>
+
+                {/* Release year  if  movie*/}
+
+                <div className="w-100 flex flex-col flex-left mb-2">
+                    <label htmlFor="year">Release Year</label>
+                    <input 
+                        id="year"
+                        placeholder="year"
+                        value={year}
+                        onChange={ev => setYear(ev.target.value)}
+                    
+                    
+                    />
+                </div>
+
+                {/* youtube  emble link */}
+
+                <div className="w-100 flex flex-col flex-left mb-2">
+                    <label htmlFor="youtubelink">Youtube link</label>
+                    <input 
+                        id="youtubelink"
+                        placeholder="youtubelink"
+                        value={youtubelink}
+                        onChange={ev => setYoutubelink(ev.target.value)}
+                    
+                    
+                    />
+                </div>
+
+
+                {/* language of the  movie */}
+
+                <div className="w-100 flex flex-col flex-left mb-2">
+                    <label htmlFor="language"> Language</label>
+                    <select name="language" id="language">
+                        <option value="">Select language</option>
+                        <option value="Fongbé (ORG)">Fongbé</option>
+                        <option value="Minan">Minan</option>
+                        <option value="Sahouè">Sahouè</option>
+                        <option value="Bariba">Bariba</option>
+                        <option value="Fongbé">Fongbé </option>
+                        <option value="Français">Français</option>
+                        <option value="Anglais">Anglais</option>
+                        <option value="Dual audio [Fongbé] + [français]">Dual audio [Fongbé] + [français]</option>
+                        <option value="Dual audio [Bariba] + [français]">Dual audio [Bariba] + [français]</option>
+                        
+                    </select>
+                </div>
+
+                {/* Quality  of the  movie */}
+
+                <div className="w-100 flex flex-col flex-left mb-2">
+                    <label htmlFor="quality">Quality of movie</label>
+
+                    <select name="quality" id="quality">
+                        <option value="">Select Quality</option>
+                        <option value="480p || 720p || 1080p -WEB-DL">480p || 720p || 1080p ---WEB-DL</option>
+                        <option value="480p || 720p || 1080p || 2160P ---WEB-DL">480p || 720p || 1080p || 2160P ---WEB-DL</option>
+                        <option value="480p || 720p || 1080p -HDTC">480p || 720p || 1080p -HDTC</option> 
+
+                        
+                        
+                    </select>
+
+                </div>
+
+
 
             </div>
 
