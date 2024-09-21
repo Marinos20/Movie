@@ -44,6 +44,8 @@ export default function Movie() {
 
     // Download link functions
 
+    const resolutions  = ["480p" , "720p" , "1080p" , "4k"];
+
     const handleInputChange = (resolution , value) => {
         setDownloadlink(prevstate => ({
             ...prevstate,
@@ -58,6 +60,9 @@ export default function Movie() {
         }));
     };
 
+    // slug function , url for every space will be generate - for every time press space 
+    // don't forget marinos 
+
 
 
 
@@ -69,6 +74,8 @@ export default function Movie() {
         </Head>
         <form className="addmovieform">
         <div className="formdata w-100 flex flex-sb mt-3 flex-left">
+
+            {/* for left  side*/}
             <div className="w-50 flex flex-col flex-left ">
                             {/* movie background image */}
             <div className="w-100 flex flex-col flex-left mb-2">
@@ -139,15 +146,100 @@ export default function Movie() {
             </div>
 
                             {/* movie downloadlink   */}
-                            <div className="w-100 flex flex-col flex-left mb-2">
+                <div className="w-100 flex flex-col flex-left mb-2">
                 <label htmlFor="downloadlink">Downloadlink </label>
                <div className="flex gap-1">
                 <div className={showInputs['480p']? 'dresolbtn active' : 'dresolbtn'} onClick={()=> toggleInputVisibility('480p')}>
                     {showInputs['480p'] ? 'Hide 480p' : 'Show 480p'}
                 </div>
+                <div className={showInputs['720p']? 'dresolbtn active' : 'dresolbtn'} onClick={()=> toggleInputVisibility('720p')}>
+                    {showInputs['720p'] ? 'Hide 720p' : 'Show 720p'}
+                </div>
+                <div className={showInputs['1080p']? 'dresolbtn active' : 'dresolbtn'} onClick={()=> toggleInputVisibility('1080p')}>
+                    {showInputs['1080p'] ? 'Hide 1080p' : 'Show 1080p'}
+                </div>
+                <div className={showInputs['4k']? 'dresolbtn active' : 'dresolbtn'} onClick={()=> toggleInputVisibility('4k')}>
+                    {showInputs['4k'] ? 'Hide 4k' : 'Show 4k'}
+                </div>
                </div>
+               {resolutions ? <>{resolutions.map(resolution => (
+                <div key={resolution} className="w-100"> 
+                {showInputs[resolution] && (
+                    <>
+                    <input type="text"
+                            id={`downloadlink ${resolution}`}
+                            placeholder={`${resolution} Download link`}
+                            value={setDownloadlink[resolution]}
+                            onChange={ev => handleInputChange(resolution, ev.target.value)}
+                    
+                    
+                    />
+                    </>
+                )}
+
+                </div>
+
+               ))}</> : null}
+            </div>
+            {/* Movie status  (Draft or publish*/}
+            <div className="w-100 flex flex-col flex-left mb-2">
+                <label htmlFor="status">Status</label>
+                <div className="flex gap-05">
+                    <input type="radio" 
+                    id="draft"
+                    name="status"
+                    value="draft"
+                    checked={status === "draft"}
+                    onChange={(e) => setStatus(e.target.value)}
+                    
+                    />
+                    <label htmlFor="draft">Draft</label>
+                </div>
+
+                <div className="flex gap-05">
+                    <input type="radio" 
+                    id="publish"
+                    name="status"
+                    value="publish"
+                    checked={status === "publish"}
+                    onChange={(e) => setStatus(e.target.value)}
+                    
+                    />
+                    <label htmlFor="publish">Publish</label>
+                </div>
             </div>
 
+
+            </div>
+                {/* for right  side*/}
+            <div className="w-50 flex flex-col flex-left">
+                {/* Movie small  Poster*/}
+
+                <div className="w-100 flex flex-col flex-left mb-2">
+                    <label htmlFor="smposter">Main Poster</label>
+                    <input 
+                        id="smposter"
+                        placeholder="smposter image link"
+                        value={smposter}
+                        onChange={ev => setSmposter(ev.target.value)}
+                    
+                    
+                    />
+                </div>
+
+                {/* Movie slug  url*/}
+
+                <div className="w-100 flex flex-col flex-left mb-2">
+                    <label htmlFor="slug">Slug (url) Poster</label>
+                    <input 
+                        id="slug"
+                        placeholder="Url of the movie"
+                        value={slug}
+                        onChange={ev => setSlug(ev.target.value)}
+                    
+                    
+                    />
+                </div>
 
             </div>
 
