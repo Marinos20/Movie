@@ -36,20 +36,15 @@
   dependencies:
     sparse-bitfield "^3.0.3"
 
-"@next/env@14.2.2":
-  version "14.2.2"
-  resolved "https://registry.npmjs.org/@next/env/-/env-14.2.2.tgz"
-  integrity sha512-sk72qRfM1Q90XZWYRoJKu/UWlTgihrASiYw/scb15u+tyzcze3bOuJ/UV6TBOQEeUaxOkRqGeuGUdiiuxc5oqw==
+"@next/env@14.2.13":
+  version "14.2.13"
+  resolved "https://registry.npmjs.org/@next/env/-/env-14.2.13.tgz"
+  integrity sha512-s3lh6K8cbW1h5Nga7NNeXrbe0+2jIIYK9YaA9T7IufDWnZpozdFUp6Hf0d5rNWUKu4fEuSX2rCKlGjCrtylfDw==
 
-"@next/swc-linux-x64-gnu@14.2.2":
-  version "14.2.2"
-  resolved "https://registry.npmjs.org/@next/swc-linux-x64-gnu/-/swc-linux-x64-gnu-14.2.2.tgz"
-  integrity sha512-NqWOHqqq8iC9tuHvZxjQ2tX+jWy2X9y8NX2mcB4sj2bIccuCxbIZrU/ThFPZZPauygajZuVQ6zediejQHwZHwQ==
-
-"@next/swc-linux-x64-musl@14.2.2":
-  version "14.2.2"
-  resolved "https://registry.npmjs.org/@next/swc-linux-x64-musl/-/swc-linux-x64-musl-14.2.2.tgz"
-  integrity sha512-lGepHhwb9sGhCcU7999+iK1ZZT+6rrIoVg40MP7DZski9GIZP80wORSbt5kJzh9v2x2ev2lxC6VgwMQT0PcgTA==
+"@next/swc-linux-x64-gnu@14.2.13":
+  version "14.2.13"
+  resolved "https://registry.npmjs.org/@next/swc-linux-x64-gnu/-/swc-linux-x64-gnu-14.2.13.tgz"
+  integrity sha512-aVc7m4YL7ViiRv7SOXK3RplXzOEe/qQzRA5R2vpXboHABs3w8vtFslGTz+5tKiQzWUmTmBNVW0UQdhkKRORmGA==
 
 "@panva/hkdf@^1.0.2", "@panva/hkdf@^1.1.1":
   version "1.1.1"
@@ -92,9 +87,9 @@ asynckit@^0.4.0:
   integrity sha512-Oei9OH4tRh0YqU3GxhX79dM/mwVgvbZJaSNaRk+bshkj0S5cfHcgYakreBjrHwatXKbz+IoIdYLxrKim2MjW0Q==
 
 axios@^1.6.8:
-  version "1.6.8"
-  resolved "https://registry.npmjs.org/axios/-/axios-1.6.8.tgz"
-  integrity sha512-v/ZHtJDU39mDpyBoFVkETcd/uNdxrWRrg3bKpOKzXFA6Bvqopts6ALSMU3y6ijYxbw2B+wPrIv46egTzJXCLGQ==
+  version "1.7.7"
+  resolved "https://registry.npmjs.org/axios/-/axios-1.7.7.tgz"
+  integrity sha512-S4kL7XrjgBmvdGut0sN3yJxqYzrDOnivkBiN0OFs6hLiUam3UPvswUo0kqGyhqUZGEOytHyumEdXsAkgCOUf3Q==
   dependencies:
     follow-redirects "^1.15.6"
     form-data "^4.0.0"
@@ -293,12 +288,12 @@ next-auth@^4.24.7:
     preact-render-to-string "^5.1.19"
     uuid "^8.3.2"
 
-"next@^12.2.5 || ^13 || ^14", next@14.2.2:
-  version "14.2.2"
-  resolved "https://registry.npmjs.org/next/-/next-14.2.2.tgz"
-  integrity sha512-oGwUaa2bCs47FbuxWMpOoXtBMPYpvTPgdZr3UAo+pu7Ns00z9otmYpoeV1HEiYL06AlRQQIA/ypK526KjJfaxg==
+"next@^12.2.5 || ^13 || ^14", next@^14.2.13:
+  version "14.2.13"
+  resolved "https://registry.npmjs.org/next/-/next-14.2.13.tgz"
+  integrity sha512-BseY9YNw8QJSwLYD7hlZzl6QVDoSFHL/URN5K64kVEVpCsSOWeyjbIGK+dZUaRViHTaMQX8aqmnn0PHBbGZezg==
   dependencies:
-    "@next/env" "14.2.2"
+    "@next/env" "14.2.13"
     "@swc/helpers" "0.5.5"
     busboy "1.6.0"
     caniuse-lite "^1.0.30001579"
@@ -306,15 +301,15 @@ next-auth@^4.24.7:
     postcss "8.4.31"
     styled-jsx "5.1.1"
   optionalDependencies:
-    "@next/swc-darwin-arm64" "14.2.2"
-    "@next/swc-darwin-x64" "14.2.2"
-    "@next/swc-linux-arm64-gnu" "14.2.2"
-    "@next/swc-linux-arm64-musl" "14.2.2"
-    "@next/swc-linux-x64-gnu" "14.2.2"
-    "@next/swc-linux-x64-musl" "14.2.2"
-    "@next/swc-win32-arm64-msvc" "14.2.2"
-    "@next/swc-win32-ia32-msvc" "14.2.2"
-    "@next/swc-win32-x64-msvc" "14.2.2"
+    "@next/swc-darwin-arm64" "14.2.13"
+    "@next/swc-darwin-x64" "14.2.13"
+    "@next/swc-linux-arm64-gnu" "14.2.13"
+    "@next/swc-linux-arm64-musl" "14.2.13"
+    "@next/swc-linux-x64-gnu" "14.2.13"
+    "@next/swc-linux-x64-musl" "14.2.13"
+    "@next/swc-win32-arm64-msvc" "14.2.13"
+    "@next/swc-win32-ia32-msvc" "14.2.13"
+    "@next/swc-win32-x64-msvc" "14.2.13"
 
 oauth@^0.9.15:
   version "0.9.15"

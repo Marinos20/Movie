@@ -1,4 +1,4 @@
-const  { Schema } = require("mongoose")
+const  { Schema, models ,model } = require("mongoose")
 
  // create a model for database
 const MovieSchema = new Schema ({
